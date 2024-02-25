@@ -1,14 +1,13 @@
 // import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
-import './App.css';
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <h1 className="text-3xl font-bold underline text-purple-500 bg-black p-4">
+        Hello world!
+      </h1>
       <section className="text-gray-600 body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
