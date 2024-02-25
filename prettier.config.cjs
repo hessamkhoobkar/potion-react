@@ -3,5 +3,5 @@ module.exports = {
   semi: true,
   singleQuote: true,
   arrowParens: 'avoid',
-  "plugins": ["prettier-plugin-tailwindcss"],
+  plugins: ['prettier-plugin-tailwindcss'],
 };
