@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import { ThemeProvider } from '@/components/theme-provider';
 import { Button } from '@/components/ui/button';
@@ -7,6 +7,7 @@ import { ModeToggle } from './components/mode-toggle';
 
 function App() {
   const [language, setLanguage] = useState({ lang: 'en', dir: 'ltr' });
+
   function handleLanguageCall() {
     if (language.lang === 'en') {
       setLanguage({ lang: 'fa', dir: 'rtl' });
@@ -16,7 +17,7 @@ function App() {
     }
   }
   return (
-    <>
+    <HelmetProvider>
       <Helmet htmlAttributes={{ lang: language.lang, dir: language.dir }} />
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
         <div className="flex h-dvh w-dvw items-stretch justify-center">
@@ -36,7 +37,7 @@ function App() {
           </section>
         </div>
       </ThemeProvider>
-    </>
+    </HelmetProvider>
   );
 }
 
