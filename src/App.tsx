@@ -1,14 +1,24 @@
-// import { useState } from "react";
+import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 import { Button } from '@/components/ui/button';
 
 function App() {
-  // const [count, setCount] = useState(0);
-
+  const [language, setLanguage] = useState({ lang: 'en', dir: 'ltr' });
+  function handleLanguageCall() {
+    if (language.lang === 'en') {
+      setLanguage({ lang: 'fa', dir: 'rtl' });
+      return;
+    } else {
+      setLanguage({ lang: 'en', dir: 'ltr' });
+    }
+  }
   return (
     <>
+      <Helmet htmlAttributes={{ lang: language.lang, dir: language.dir }} />
+
       <div className="flex h-dvh w-dvw items-stretch justify-center">
         <aside className="w-1/3 bg-gray-200 p-8">
-          <Button>Click me</Button>
+          <Button onClick={handleLanguageCall}>Click me</Button>
         </aside>
         <section className="w-2/3 p-8">
           <p>
