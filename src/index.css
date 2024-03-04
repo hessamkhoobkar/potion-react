@@ -70,7 +70,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-sans text-base font-normal text-foreground antialiased;
   }
 
   *::-webkit-scrollbar {

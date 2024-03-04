@@ -9,6 +9,15 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      sans: [
+        '"Rubik", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32'
+        },
+      ],
+    },
     container: {
       center: true,
       padding: "2rem",
