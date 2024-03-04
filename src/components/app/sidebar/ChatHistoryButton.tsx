@@ -11,7 +11,7 @@ export default function ChatHistoryButton({
 }) {
   return (
     <Button
-      className="group relative w-full justify-start overflow-hidden text-ellipsis transition-all duration-200 ease-in-out active:scale-95"
+      className="group relative w-full justify-start overflow-hidden text-ellipsis"
       variant="ghost"
     >
       <span className="truncate">{chat.title}</span>
