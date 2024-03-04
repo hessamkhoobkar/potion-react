@@ -83,7 +83,7 @@ export default function UserDropdown() {
           <UserDropdownTrigger />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-72">
+      <DropdownMenuContent align="center" className="w-64">
         {linksData.map(({ group, items }, index) => (
           <>
             {index !== 0 && <DropdownMenuSeparator />}
