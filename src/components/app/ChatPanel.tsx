@@ -1,6 +1,5 @@
-import { Button } from '../ui/button';
-import { Input } from '../ui/input';
 import ChatHeader from './chat-panel/ChatHeader';
+import InputSection from './chat-panel/InputSection';
 
 export default function ChatPanel() {
   return (
@@ -21,10 +20,7 @@ export default function ChatPanel() {
             برند.
           </p>
         </div>
-        <div className="flex gap-4">
-          <Input />
-          <Button>Send</Button>
-        </div>
+        <InputSection />
       </div>
     </div>
   );
