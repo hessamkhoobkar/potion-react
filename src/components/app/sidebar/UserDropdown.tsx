@@ -90,6 +90,7 @@ export default function UserDropdown() {
             <DropdownMenuGroup key={group}>
               {items.map(item => (
                 <UserDropdownItem
+                  key={item.label}
                   label={item.label}
                   shortcut={item.shortcut}
                   icon={item.icon}
