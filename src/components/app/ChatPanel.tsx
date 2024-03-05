@@ -1,10 +1,12 @@
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import ChatHeader from './chat-panel/ChatHeader';
+
 export default function ChatPanel() {
   return (
     <div className="h-dvh max-w-full grow p-2">
-      <div className="flex h-full w-full flex-col rounded-3xl border p-4">
-        <div>
-          <span>header</span>
-        </div>
+      <div className="flex h-full w-full flex-col gap-4 rounded-3xl border p-4">
+        <ChatHeader />
         <div className="h-full w-full rounded-lg border bg-card p-4 text-card-foreground shadow-sm">
           <span>chat panel </span>
           <p>
@@ -19,8 +21,9 @@ export default function ChatPanel() {
             برند.
           </p>
         </div>
-        <div>
-          <span>chat input</span>
+        <div className="flex gap-4">
+          <Input />
+          <Button>Send</Button>
         </div>
       </div>
     </div>
