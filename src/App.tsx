@@ -2,12 +2,16 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from '@/layouts/RootLayout';
 import { ThemeProvider } from '@/components/theme-provider';
+import ChatMessages from './routes/ChatMessages';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout lang="en" />,
-    children: [{ path: 'contacts/:id', element: <RootLayout lang="en" /> }],
+    children: [
+      { path: 'chat/00', element: <ChatMessages /> },
+      { path: 'contacts/:id', element: <ChatMessages /> },
+    ],
   },
   {
     path: '/fa-rtl/',
