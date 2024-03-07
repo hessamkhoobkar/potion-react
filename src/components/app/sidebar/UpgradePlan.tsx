@@ -4,13 +4,13 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
 
 import { BrainCircuit } from 'lucide-react';
+import UpgradePlanContent from './UpgradePlanContent';
 
 export default function UpgradePlan() {
   return (
@@ -34,21 +34,14 @@ export default function UpgradePlan() {
           </div>
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-7xl">
         <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
+          <DialogTitle>Upgrade your plan</DialogTitle>
           <DialogDescription>
-            Make changes to your profile here. Click save when you're done.
+            Access all the features and unlock the full potential of Potion AI.
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minima
-          sunt nemo nesciunt facilis assumenda? Consequatur, aliquid minima. Qui
-          deserunt itaque possimus fugit iste enim non, dicta beatae vel iusto.
-        </div>
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
+        <UpgradePlanContent />
       </DialogContent>
     </Dialog>
   );
