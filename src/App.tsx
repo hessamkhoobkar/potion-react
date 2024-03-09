@@ -9,8 +9,8 @@ const router = createBrowserRouter([
     path: '/',
     element: <RootLayout lang="en" />,
     children: [
-      { path: 'chat/00', element: <ChatMessages /> },
-      { path: 'contacts/:id', element: <ChatMessages /> },
+      { path: '', element: <ChatMessages /> },
+      { path: 'conversation/:id', element: <ChatMessages /> },
     ],
   },
   {
