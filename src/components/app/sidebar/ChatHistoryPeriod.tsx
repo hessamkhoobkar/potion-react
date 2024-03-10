@@ -25,7 +25,8 @@ export default function ChatHistoryPeriod({
       </span>
       <div key={periodHistory.title} className="w-full flex-col">
         {periodHistory.chats.map(item => (
-          <ChatHistoryButton key={item.id} chat={item} />
+          // Not using id as key because it's not unique in demo data, you should use unique id and use it as key
+          <ChatHistoryButton key={item.title} chat={item} />
         ))}
       </div>
     </div>
