@@ -1,5 +1,5 @@
+import { NavLink } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Trash } from 'lucide-react';
 
 export default function ChatHistoryButton({
   chat,
@@ -10,20 +10,15 @@ export default function ChatHistoryButton({
   };
 }) {
   return (
-    <Button
-      className="group relative w-full justify-start overflow-hidden text-ellipsis"
-      variant="ghost"
-    >
-      <span className="truncate">{chat.title}</span>
-      <div className="absolute inset-y-0 end-0 flex w-1/3 items-center justify-end bg-gradient-to-l from-gray-800 via-gray-800 opacity-0 transition-all duration-200 ease-in-out group-hover:opacity-100">
+    <>
+      <NavLink to={`conversation/${chat.id}`}>
         <Button
-          className="hover:text-red-500"
+          className="w-full justify-start overflow-hidden text-ellipsis"
           variant="ghost"
-          onClick={event => event.stopPropagation()}
         >
-          <Trash size={16} />
+          <span className="truncate">{chat.title}</span>
         </Button>
-      </div>
-    </Button>
+      </NavLink>
+    </>
   );
 }
