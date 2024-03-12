@@ -2,14 +2,15 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RootLayout from '@/layouts/RootLayout';
 import { ThemeProvider } from '@/components/theme-provider';
-import ChatMessages from './routes/ChatMessages';
+import ChatMessages from '@/routes/ChatMessages';
+import InitState from '@/routes/InitState';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <RootLayout lang="en" />,
     children: [
-      { path: '', element: <ChatMessages /> },
+      { path: '', element: <InitState /> },
       { path: 'conversation/:id', element: <ChatMessages /> },
     ],
   },
