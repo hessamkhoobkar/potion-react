@@ -11,7 +11,7 @@ import { ChevronRight } from 'lucide-react';
 
 export default function InitState() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-8">
+    <div className="flex h-full w-full flex-col items-center justify-center gap-12">
       <div className="flex max-w-4xl flex-col">
         <p className="text-sm text-foreground/60">Curious minds inquire:</p>
         <h2 className="text-2xl">
@@ -80,8 +80,11 @@ export default function InitState() {
             </CardDescription>
           </CardHeader>
           <CardContent className="grid flex-col justify-end">
-            <div className="absolute inset-x-4 bottom-4 flex items-center justify-center">
-              <Button className="w-1/2 justify-between" variant="outline">
+            <div className="absolute inset-x-4 bottom-6 flex items-center justify-center">
+              <Button
+                className="h-auto w-full justify-between p-4"
+                variant="outline"
+              >
                 <span>Learn more</span>
                 <ChevronRight className="h-4 w-4" />
               </Button>
